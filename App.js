@@ -104,32 +104,6 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop:10,
-    display:'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  listItem:{
-    flexDirection: 'row',
-    backgroundColor: '#d4d4d4',
-    marginBottom: 10,
-    padding: 5
-  },
-  header:{
-    fontWeight:'bold',
-    padding: 2
-  },
-  image:{
-    marginRight: 5,
-    flex:1,
 
-  },
-  textBlock:{
-    flex:2,
-  }
-});
 
 export default App;

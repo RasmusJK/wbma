@@ -3,11 +3,11 @@ import React, {useContext} from "react";
 import PropTypes from "prop-types";
 import ListItem from "./ListItem";
 import {MediaContext} from '../contexts/MediaContext';
-import {useFetch} from '../Hooks/APIHooks';
+import {getAllMedia} from '../Hooks/APIHooks';
 
 const List = () => {
   const [media, setMedia] = useContext(MediaContext);
-  const [data, loading] =useFetch('https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json');
+  const [data, loading] =getAllMedia();
   console.log('List',data,loading);
   setMedia(data);
   return (
