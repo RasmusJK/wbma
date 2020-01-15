@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f416fdd9-8847-40b9-83f8-f15c4c048a61" name="Default Changelist" comment="" />
+    <list default="true" id="f416fdd9-8847-40b9-83f8-f15c4c048a61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/List.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,13 +17,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2261">
-              <caret line="173" selection-start-line="173" selection-end-line="173" />
+            <state relative-caret-position="187">
+              <caret line="102" column="20" lean-forward="true" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="e#135#1683#0" />
                 <element signature="e#2823#2849#0" expanded="true" />
               </folding>
@@ -27,25 +30,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/List.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="307">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#489#545#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/ListItem.js">
+        <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contexts/MediaContext.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#156#1704#0" />
               </folding>
             </state>
           </provider>
@@ -68,9 +82,11 @@
       <list>
         <option value="$PROJECT_DIR$/.eslintrc.js" />
         <option value="$PROJECT_DIR$/.editorconfig" />
-        <option value="$PROJECT_DIR$/components/List.js" />
         <option value="$PROJECT_DIR$/components/ListItem.js" />
+        <option value="$PROJECT_DIR$/contexts/MediaContext.js" />
         <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/Hooks/APIHooks.js" />
+        <option value="$PROJECT_DIR$/components/List.js" />
       </list>
     </option>
   </component>
@@ -104,6 +120,11 @@
               <item name="firstApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="firstApp" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="firstApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="firstApp" type="462c0819:PsiDirectoryNode" />
+              <item name="contexts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -144,15 +165,16 @@
       <option name="presentableId" value="Default" />
       <updated>1578995832123</updated>
       <workItem from="1578995836355" duration="8240000" />
-      <workItem from="1579071527526" duration="567000" />
+      <workItem from="1579071527526" duration="5961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8807000" />
+    <option name="totallyTimeSpent" value="14201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25704697" />
@@ -203,24 +225,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/List.js">
+    <entry file="file://$PROJECT_DIR$/contexts/MediaContext.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#156#1704#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        <state relative-caret-position="187">
+          <caret line="102" column="20" lean-forward="true" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="e#135#1683#0" />
             <element signature="e#2823#2849#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#489#545#0" />
           </folding>
         </state>
       </provider>
