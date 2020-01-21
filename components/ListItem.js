@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#d4d4d4',
     marginBottom: 10,
-    padding: 5
+    padding: 5,
+
   },
   header: {
     fontWeight: 'bold',
