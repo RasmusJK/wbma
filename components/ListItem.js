@@ -29,17 +29,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#d4d4d4',
     marginBottom: 10,
     padding: 5,
-
+    elevation: 5,
   },
   header: {
     fontWeight: 'bold',
-    padding: 2
+    color: 'purple',
+    fontSize: 16,
   },
   image: {
     marginRight: 5,
     flex: 1,
     width: 100,
-    height: '100%',
+    height: 100,
+    borderRadius: 15,
   },
   textBlock: {
     flex: 2
