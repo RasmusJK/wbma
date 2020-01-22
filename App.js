@@ -91,19 +91,16 @@ const styles = StyleSheet.create({
 
 export default App;*/
 import React from 'react';
-import {StyleSheet, Text, View, FlatList, TouchableOpacity, Image} from 'react-native';
-import List from "./components/List";
 import {MediaProvider} from "./contexts/MediaContext";
+import Navigator from "./navigators/Navigator";
 
 
 const App = () => {
   return (
     <MediaProvider>
-      <List/>
+      <Navigator/>
     </MediaProvider>
   );
 };
-
-
 
 export default App;
