@@ -7,14 +7,16 @@ import {
   AsyncStorage,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import {login} from '../Hooks/APIHooks'
+import {login,register} from '../Hooks/APIHooks'
 import FormTextInput from '../components/FormTextInput'
 import useSignUpForm from '../Hooks/LoginHooks';
+import useRegisterForm from '../Hooks/RegisterHooks'
 
 
 
 const Login = (props) => { // props is needed for navigation
   const {handleUsernameChange, handlePasswordChange, inputs} = useSignUpForm();
+  const {handleUsernameRegister, handleEmailRegister,handlePasswordRegister, registerInputs} = useRegisterForm();
   const signInAsync = async () => {
     try {
       const user = await login(inputs);
@@ -22,6 +24,23 @@ const Login = (props) => { // props is needed for navigation
       await AsyncStorage.setItem('userToken',user.token);
       await AsyncStorage.setItem('user',JSON.stringify(user.user));
       props.navigation.navigate('App');
+    } catch (e) {
+      console.log('error', e.message)
+    }
+
+  };
+  const registerAsync = async () => {
+    try {
+      const res = await register(registerInputs);
+      console.log('Register',res);
+      if(res.message === "User created successfully") {
+        const user = await login(registerInputs);
+        await AsyncStorage.setItem('userToken', user.token);
+        await AsyncStorage.setItem('user', JSON.stringify(user.user));
+        props.navigation.navigate('App');
+      }else {
+        console.log(res.message);
+      }
     } catch (e) {
       console.log('error', e.message)
     }
@@ -43,6 +62,27 @@ const Login = (props) => { // props is needed for navigation
           onChangeText={handlePasswordChange}
         />
         <Button title="Sign in!" onPress={signInAsync} />
+      </View>
+      <Text>Register</Text>
+      <View style={styles.form}>
+        <FormTextInput
+          autoCapitalize='none'
+          placeholder='username'
+          onChangeText={handleUsernameRegister}
+        />
+        <FormTextInput
+          autoCapitalize='none'
+          placeholder='email'
+          secureTextEntry={false}
+          onChangeText={handleEmailRegister}
+        /><FormTextInput
+        autoCapitalize='none'
+        placeholder='password'
+        secureTextEntry={true}
+        onChangeText={handlePasswordRegister}
+      />
+
+        <Button title="Register" onPress={registerAsync} />
       </View>
     </View>
   );
