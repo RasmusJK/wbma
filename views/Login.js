@@ -17,6 +17,7 @@ import useRegisterForm from '../Hooks/RegisterHooks'
 const Login = (props) => { // props is needed for navigation
   const {handleUsernameChange, handlePasswordChange, inputs} = useSignUpForm();
   const {handleUsernameRegister, handleEmailRegister,handlePasswordRegister, registerInputs} = useRegisterForm();
+
   const signInAsync = async () => {
     try {
       const user = await login(inputs);
@@ -27,16 +28,18 @@ const Login = (props) => { // props is needed for navigation
     } catch (e) {
       console.log('error', e.message)
     }
-
   };
+
   const registerAsync = async () => {
     try {
       const res = await register(registerInputs);
       console.log('Register',res);
       if(res.message === "User created successfully") {
         const user = await login(registerInputs);
+        console.log('user',user);
         await AsyncStorage.setItem('userToken', user.token);
         await AsyncStorage.setItem('user', JSON.stringify(user.user));
+
         props.navigation.navigate('App');
       }else {
         console.log(res.message);
@@ -63,6 +66,7 @@ const Login = (props) => { // props is needed for navigation
         />
         <Button title="Sign in!" onPress={signInAsync} />
       </View>
+
       <Text>Register</Text>
       <View style={styles.form}>
         <FormTextInput
@@ -75,13 +79,14 @@ const Login = (props) => { // props is needed for navigation
           placeholder='email'
           secureTextEntry={false}
           onChangeText={handleEmailRegister}
-        /><FormTextInput
+
+        />
+        <FormTextInput
         autoCapitalize='none'
         placeholder='password'
         secureTextEntry={true}
         onChangeText={handlePasswordRegister}
       />
-
         <Button title="Register" onPress={registerAsync} />
       </View>
     </View>

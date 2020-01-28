@@ -2,6 +2,7 @@ import {useState} from 'react';
 
 const useRegisterForm = () => {
   const [registerInputs, setInputs] = useState({});
+
   const handleUsernameRegister = (text) => {
     setInputs((inputs) =>
       ({
@@ -9,7 +10,7 @@ const useRegisterForm = () => {
         username: text,
       }));
   };
-  const handleEmailReg = (text) => {
+  const handleEmailRegister = (text) => {
     setInputs((inputs) =>
       ({
         ...inputs,
@@ -25,7 +26,7 @@ const useRegisterForm = () => {
   };
   return {
     handleUsernameRegister,
-    handleEmailReg,
+    handleEmailRegister,
     handlePasswordRegister,
     registerInputs,
   };

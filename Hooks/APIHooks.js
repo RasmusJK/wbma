@@ -46,7 +46,7 @@ const login = async (data) => {
 };
 
 const register = async (data) => {
-
+console.log('register func ',data);
   const fetchOptions = {
     method: 'POST',
     headers: {
@@ -58,7 +58,7 @@ const register = async (data) => {
     const response = await fetch(apiUrl + 'users', fetchOptions);
     return await response.json();
   }catch (e) {
-    console.log('error', e.message);
+    console.log('registerError', e.message);
   }
 };
 
