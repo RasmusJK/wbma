@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, View, Text,  Image} from 'react-native';
+import {Image} from 'react-native';
+import {View, Text} from 'react-native';
 
 const mediaUrl = "http://media.mw.metropolia.fi/wbma/uploads/";
 
@@ -7,18 +8,22 @@ const Single = (props) => {
   const filename = props.navigation.getParam('filename', 'Image not found');
   console.log('Image filename: '+ filename);
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>
+    <View>
+      <Text style={{margin: 5, fontWeight: 'bold',fontSize: 20}}>
         {props.navigation.getParam('title', 'No title')}
       </Text>
-      <Image style={styles.image}
-             source={{uri: mediaUrl + filename}}
+      <Image  style={{height:350, width:400}}
+        source={{uri: mediaUrl + filename}}
       />
+      <Text>
+        {props.navigation.getParam('desc', 'No description')}
+      </Text>
+
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   title:{
     flex:1
   },
@@ -34,6 +39,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 20,
   },
-});
+});*/
 
 export default Single;

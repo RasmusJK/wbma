@@ -1,8 +1,5 @@
 import React from 'react';
 import {
-  StyleSheet,
-  View,
-  Text,
   Button,
   AsyncStorage,
 } from 'react-native';
@@ -11,6 +8,7 @@ import {login,register} from '../Hooks/APIHooks'
 import FormTextInput from '../components/FormTextInput'
 import useSignUpForm from '../Hooks/LoginHooks';
 import useRegisterForm from '../Hooks/RegisterHooks'
+import {Header, Text, View} from "native-base"
 
 
 
@@ -50,9 +48,10 @@ const Login = (props) => { // props is needed for navigation
 
   };
   return (
-    <View style={styles.container}>
-      <Text>Login</Text>
-      <View style={styles.form}>
+    <View>
+      <Header><Text style={{marginTop: 15,fontWeight: 'bold'}}>MyApp</Text></Header>
+      <Text style={{textAlign: 'center'}}>Login</Text>
+      <View>
         <FormTextInput
           autoCapitalize='none'
           placeholder='username'
@@ -67,8 +66,8 @@ const Login = (props) => { // props is needed for navigation
         <Button title="Sign in!" onPress={signInAsync} />
       </View>
 
-      <Text>Register</Text>
-      <View style={styles.form}>
+      <Text style={{textAlign: 'center'}}>Register</Text>
+      <View>
         <FormTextInput
           autoCapitalize='none'
           placeholder='username'
@@ -93,7 +92,7 @@ const Login = (props) => { // props is needed for navigation
   );
 };
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 40,
   },
-});
+});*/
 
 // proptypes here
 
