@@ -62,6 +62,18 @@ console.log('register func ',data);
   }
 };
 
+const checkNameAvailability = async (uName) =>{
+  const fetchOptions ={
+    method: 'GET'
+  };
+  try {
+    const response = await fetch(apiUrl + 'users/username/' + uName, fetchOptions);
+    const json = await response.json();
+    return json.available
+  } catch(e){
+    console.log('error: ', e.message);
+  }
+};
 
-export {getAllMedia, login,register}
+export {getAllMedia, login,register,checkNameAvailability}
 

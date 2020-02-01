@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f416fdd9-8847-40b9-83f8-f15c4c048a61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hooks/APIHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/Hooks/APIHooks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/Login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,12 +20,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
+            <state relative-caret-position="204">
+              <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#3441#3621#0" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
@@ -53,13 +62,13 @@
         <option value="$PROJECT_DIR$/views/AuthLoading.js" />
         <option value="$PROJECT_DIR$/Hooks/LoginHooks.js" />
         <option value="$PROJECT_DIR$/views/Profile.js" />
-        <option value="$PROJECT_DIR$/Hooks/APIHooks.js" />
         <option value="$PROJECT_DIR$/Hooks/RegisterHooks.js" />
         <option value="$PROJECT_DIR$/components/List.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/navigators/Navigator.js" />
         <option value="$PROJECT_DIR$/views/Single.js" />
         <option value="$PROJECT_DIR$/components/FormTextInput.js" />
+        <option value="$PROJECT_DIR$/Hooks/APIHooks.js" />
         <option value="$PROJECT_DIR$/views/Login.js" />
       </list>
     </option>
@@ -83,6 +92,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,7 +129,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,11 +173,12 @@
       <workItem from="1580204170155" duration="546000" />
       <workItem from="1580204831112" duration="4837000" />
       <workItem from="1580278655279" duration="4186000" />
+      <workItem from="1580568510995" duration="983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54515000" />
+    <option name="totallyTimeSpent" value="55498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -184,11 +194,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.0852349" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.147651" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49731544" visible="true" weight="0.26487252" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49731544" visible="true" weight="0.26203966" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5026846" side_tool="true" weight="0.9575071" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -326,13 +336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/ListItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -377,13 +380,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
+        <state relative-caret-position="204">
+          <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#3441#3621#0" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

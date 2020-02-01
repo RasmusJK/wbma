@@ -4,7 +4,7 @@ import {
   AsyncStorage,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import {login,register} from '../Hooks/APIHooks'
+import {login,register,checkNameAvailability} from '../Hooks/APIHooks'
 import FormTextInput from '../components/FormTextInput'
 import useSignUpForm from '../Hooks/LoginHooks';
 import useRegisterForm from '../Hooks/RegisterHooks'
@@ -78,6 +78,12 @@ const registerForm=(
     autoCapitalize='none'
     placeholder='username'
     onChangeText={handleUsernameRegister}
+    onEndEditing={async (evt) => {
+      const text = evt.nativeEvent.text;
+      const availability = await checkNameAvailability(text);
+      console.log('Name availability',availability);
+
+    }}
   />
   <FormTextInput
     autoCapitalize='none'
