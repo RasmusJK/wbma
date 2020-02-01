@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Button,
   AsyncStorage,
@@ -47,47 +47,64 @@ const Login = (props) => { // props is needed for navigation
     }
 
   };
+
+  const [toggleForm, setToggleForm] = useState(true);
+
+const loginForm = (
+  <View>
+    <Text style={{textAlign: 'center'}}>Login</Text>
+    <FormTextInput
+      autoCapitalize='none'
+      placeholder='username'
+      onChangeText={handleUsernameChange}
+    />
+    <FormTextInput
+      autoCapitalize='none'
+      placeholder='password'
+      secureTextEntry={true}
+      onChangeText={handlePasswordChange}
+    />
+    <Button title="Sign in!" onPress={signInAsync} />
+    <Button title='Dont have account?' onPress={()=>{
+      setToggleForm(false);
+    }}/>
+  </View>
+);
+
+const registerForm=(
+  <View>
+  <Text style={{textAlign: 'center'}}>Register</Text>
+  <FormTextInput
+    autoCapitalize='none'
+    placeholder='username'
+    onChangeText={handleUsernameRegister}
+  />
+  <FormTextInput
+    autoCapitalize='none'
+    placeholder='email'
+    secureTextEntry={false}
+    onChangeText={handleEmailRegister}
+
+  />
+  <FormTextInput
+    autoCapitalize='none'
+    placeholder='password'
+    secureTextEntry={true}
+    onChangeText={handlePasswordRegister}
+  />
+  <Button title="Register" onPress={registerAsync} />
+    <Button title='Already have an account?' onPress={()=>{
+      setToggleForm(true);
+    }}/>
+
+</View>
+);
+
   return (
     <View>
       <Header><Text style={{marginTop: 15,fontWeight: 'bold'}}>MyApp</Text></Header>
-      <Text style={{textAlign: 'center'}}>Login</Text>
-      <View>
-        <FormTextInput
-          autoCapitalize='none'
-          placeholder='username'
-          onChangeText={handleUsernameChange}
-        />
-        <FormTextInput
-          autoCapitalize='none'
-          placeholder='password'
-          secureTextEntry={true}
-          onChangeText={handlePasswordChange}
-        />
-        <Button title="Sign in!" onPress={signInAsync} />
-      </View>
+      {toggleForm ? loginForm : registerForm}
 
-      <Text style={{textAlign: 'center'}}>Register</Text>
-      <View>
-        <FormTextInput
-          autoCapitalize='none'
-          placeholder='username'
-          onChangeText={handleUsernameRegister}
-        />
-        <FormTextInput
-          autoCapitalize='none'
-          placeholder='email'
-          secureTextEntry={false}
-          onChangeText={handleEmailRegister}
-
-        />
-        <FormTextInput
-        autoCapitalize='none'
-        placeholder='password'
-        secureTextEntry={true}
-        onChangeText={handlePasswordRegister}
-      />
-        <Button title="Register" onPress={registerAsync} />
-      </View>
     </View>
   );
 };
