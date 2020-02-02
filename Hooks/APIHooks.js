@@ -9,22 +9,22 @@ const getAllMedia = () => {
     try {
       const response = await fetch(apiUrl + 'media/all');
       const json = await response.json();
-      console.log('apihooks',json);
+      console.log('apihooks', json);
 
       const result = await Promise.all(json.files.map(async (item) => {
-        const response = await fetch(apiUrl+'media/'+item.file_id);
+        const response = await fetch(apiUrl + 'media/' + item.file_id);
         return await response.json();
       }));
 
       setData(result);
       setLoading(false);
-    }catch (e) {
-      console.error('error',e);
+    } catch (e) {
+      console.error('error', e);
     }
   };
   useEffect(() => {
     fetchUrl();
-  },[]);
+  }, []);
   return [data, loading];
 };
 
@@ -40,13 +40,13 @@ const login = async (data) => {
   try {
     const response = await fetch(apiUrl + 'login', fetchOptions);
     return await response.json();
-  }catch (e) {
+  } catch (e) {
     console.log('error', e.message);
   }
 };
 
 const register = async (data) => {
-console.log('register func ',data);
+  console.log('register func ', data);
   const fetchOptions = {
     method: 'POST',
     headers: {
@@ -57,23 +57,24 @@ console.log('register func ',data);
   try {
     const response = await fetch(apiUrl + 'users', fetchOptions);
     return await response.json();
-  }catch (e) {
+  } catch (e) {
     console.log('registerError', e.message);
   }
 };
 
-const checkNameAvailability = async (uName) =>{
-  const fetchOptions ={
-    method: 'GET'
+const checkNameAvailability = async (uName) => {
+  const fetchOptions = {
+    method: 'GET',
   };
   try {
-    const response = await fetch(apiUrl + 'users/username/' + uName, fetchOptions);
+    const response = await fetch(apiUrl + 'users/username/' + uName,
+      fetchOptions);
     const json = await response.json();
-    return json.available
-  } catch(e){
+    return json.available;
+  } catch (e) {
     console.log('error: ', e.message);
   }
 };
 
-export {getAllMedia, login,register,checkNameAvailability}
+export {getAllMedia, login, register, checkNameAvailability};
 

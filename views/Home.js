@@ -1,6 +1,6 @@
 import React from 'react';
-import List from "../components/List";
-import {View} from "react-native";
+import List from '../components/List';
+import {View} from 'react-native';
 
 const Home = (props) => {
   const {navigation} = props;

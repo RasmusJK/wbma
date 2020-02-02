@@ -2,12 +2,11 @@ import React from 'react';
 import {TextInput} from 'react-native';
 import PropTypes from 'prop-types';
 
-
 const FormTextInput = (props) => {
   const {...otherProps} = props;
   return (
     <TextInput style={{fontSize: 16}}
-      {...otherProps}
+               {...otherProps}
     />
   );
 };
@@ -24,4 +23,4 @@ FormTextInput.propTypes = {
   style: PropTypes.object,
 };
 
-export default FormTextInput
+export default FormTextInput;

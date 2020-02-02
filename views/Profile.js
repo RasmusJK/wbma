@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, View, Text,Button, AsyncStorage} from 'react-native';
+import {StyleSheet, View, Text, Button, AsyncStorage} from 'react-native';
 import PropTypes from 'prop-types';
 
 const Profile = (props) => {
-  const [user,setUser] = useState({});
+  const [user, setUser] = useState({});
   const userToState = async () => {
     const userFromStorage = await AsyncStorage.getItem('user');
-    console.log('9',userFromStorage);
+    console.log('9', userFromStorage);
     const user = JSON.parse(userFromStorage);
 
     setUser(user);
   };
   useEffect(() => {
     userToState();
-  },[]);
+  }, []);
 
   const signOutAsync = async () => {
     await AsyncStorage.clear();
@@ -24,7 +24,7 @@ const Profile = (props) => {
       <Text>Profile</Text>
       <Text>username: {user.username}</Text>
       <Text>Email: {user.email}</Text>
-      <Button title="Logout!" onPress={signOutAsync} />
+      <Button title="Logout!" onPress={signOutAsync}/>
     </View>
   );
 };

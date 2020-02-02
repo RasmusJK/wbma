@@ -23,4 +23,5 @@ const useSignUpForm = () => {
   };
 };
 
-export default useSignUpForm
+export default useSignUpForm;
+

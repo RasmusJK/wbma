@@ -1,15 +1,15 @@
-import PropTypes from "prop-types"
-import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import React from "react";
+import PropTypes from 'prop-types';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React from 'react';
 
 const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
 
 const ListItem = (props) => {
-  return(
+  return (
     <TouchableOpacity style={styles.listItem}
                       onPress={
                         () => {
-                          props.navigation.push('Single',{
+                          props.navigation.push('Single', {
                             filename: props.singleMedia.filename,
                             title: props.singleMedia.title,
                           });
@@ -24,13 +24,12 @@ const ListItem = (props) => {
         <Text>{props.singleMedia.description}</Text>
       </View>
     </TouchableOpacity>
-  )
+  );
 };
 
 ListItem.propTypes = {
   singleMedia: PropTypes.object,
 };
-
 
 const styles = StyleSheet.create({
   listItem: {
@@ -53,8 +52,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   textBlock: {
-    flex: 2
-  }
+    flex: 2,
+  },
 
 });
 

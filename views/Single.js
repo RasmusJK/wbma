@@ -2,18 +2,18 @@ import React from 'react';
 import {Image} from 'react-native';
 import {View, Text} from 'react-native';
 
-const mediaUrl = "http://media.mw.metropolia.fi/wbma/uploads/";
+const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
 
 const Single = (props) => {
   const filename = props.navigation.getParam('filename', 'Image not found');
-  console.log('Image filename: '+ filename);
+  console.log('Image filename: ' + filename);
   return (
     <View>
-      <Text style={{margin: 5, fontWeight: 'bold',fontSize: 20}}>
+      <Text style={{margin: 5, fontWeight: 'bold', fontSize: 20}}>
         {props.navigation.getParam('title', 'No title')}
       </Text>
-      <Image  style={{height:350, width:400}}
-        source={{uri: mediaUrl + filename}}
+      <Image style={{height: 350, width: 400}}
+             source={{uri: mediaUrl + filename}}
       />
       <Text>
         {props.navigation.getParam('desc', 'No description')}
