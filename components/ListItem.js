@@ -1,29 +1,41 @@
 import PropTypes from "prop-types"
-import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import { StyleSheet, TouchableOpacity, Image} from "react-native";
 import React from "react";
-
+import {
+  ListItem as BaseListItem,
+  Button,
+  Text,
+  Left,
+  View,
+  Right,
+  Body
+} from 'native-base';
 const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
 
 const ListItem = (props) => {
   return(
-    <TouchableOpacity style={styles.listItem}
-                      onPress={
-                        () => {
-                          props.navigation.push('Single',{
-                            filename: props.singleMedia.filename,
-                            title: props.singleMedia.title,
-                          });
-                        }
-                      }
-    >
-      <Image style={styles.image}
-             source={{uri: mediaUrl + props.singleMedia.filename}}
-      />
-      <View style={styles.textBlock}>
-        <Text style={styles.header}>{props.singleMedia.title}</Text>
-        <Text>{props.singleMedia.description}</Text>
-      </View>
-    </TouchableOpacity>
+    <BaseListItem style={{flexDirection: 'row'}}>
+      <Left><Image
+        style={{flex: 1, height: 90, marginRight: 5}}
+        source={{uri: mediaUrl + props.singleMedia.filename}}
+      /></Left>
+
+      <Body style={{flex:2}}>
+        <Text numberOfLines={1}>{props.singleMedia.title}</Text>
+        <Text numberOfLines={1}>{props.singleMedia.description}</Text>
+      </Body>
+      <Right>
+      <Button title="View"  onPress={
+        () => {
+          props.navigation.push('Single', {filename: props.singleMedia.filename,
+          title: props.singleMedia.title,
+          desc: props.singleMedia.description});
+        }
+      }>
+        <Text>View</Text>
+      </Button>
+      </Right>
+    </BaseListItem>
   )
 };
 
@@ -32,7 +44,7 @@ ListItem.propTypes = {
 };
 
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   listItem: {
     flexDirection: 'row',
     backgroundColor: '#d4d4d4',
@@ -57,5 +69,5 @@ const styles = StyleSheet.create({
   }
 
 });
-
+*/
 export default ListItem;
