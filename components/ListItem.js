@@ -14,18 +14,19 @@ const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
 
 const ListItem = (props) => {
   return(
-    <BaseListItem style={{flexDirection: 'row'}}>
-      <Left><Image
+    <BaseListItem >
+      <Left>
+        <Image
         style={{flex: 1, height: 90, marginRight: 5}}
         source={{uri: mediaUrl + props.singleMedia.filename}}
       /></Left>
 
-      <Body style={{flex:2}}>
+      <Body >
         <Text numberOfLines={1}>{props.singleMedia.title}</Text>
         <Text numberOfLines={1}>{props.singleMedia.description}</Text>
       </Body>
       <Right>
-      <Button title="View"  onPress={
+      <Button  onPress={
         () => {
           props.navigation.push('Single', {filename: props.singleMedia.filename,
           title: props.singleMedia.title,
