@@ -6,6 +6,7 @@ import Profile from '../views/Profile';
 import Single from '../views/Single';
 import AuthLoading from '../views/AuthLoading';
 import Login from '../views/Login';
+import Upload from '../views/Upload';
 import React from 'react';
 import {Icon} from 'native-base';
 
@@ -13,6 +14,7 @@ const TabNavigator = createBottomTabNavigator(
   {
     Home,
     Profile,
+    Upload,
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
@@ -23,6 +25,8 @@ const TabNavigator = createBottomTabNavigator(
           iconName = 'home';
         } else if (routeName === 'Profile') {
           iconName = 'person';
+        } else if (routeName ==='Upload'){
+          iconName = 'cloud-upload';
         }
 
         // You can return any component that you like here!
