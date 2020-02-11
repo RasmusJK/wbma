@@ -76,5 +76,8 @@ const checkNameAvailability = async (uName) => {
   }
 };
 
+
+
+
 export {getAllMedia, login, register, checkNameAvailability};
 

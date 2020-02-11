@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f416fdd9-8847-40b9-83f8-f15c4c048a61" name="Default Changelist" comment="" />
+    <list default="true" id="f416fdd9-8847-40b9-83f8-f15c4c048a61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hooks/APIHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/Hooks/APIHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hooks/UploadHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/Hooks/UploadHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/Upload.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,20 +18,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hooks/UploadHooks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/Upload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hooks/LoginHooks.js">
+        <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="1173">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
@@ -58,14 +75,14 @@
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/views/Single.js" />
         <option value="$PROJECT_DIR$/components/FormTextInput.js" />
-        <option value="$PROJECT_DIR$/Hooks/APIHooks.js" />
         <option value="$PROJECT_DIR$/Hooks/LoginHooks.js" />
         <option value="$PROJECT_DIR$/Hooks/RegisterHooks.js" />
         <option value="$PROJECT_DIR$/views/Login.js" />
         <option value="$PROJECT_DIR$/views/Uploads.js" />
         <option value="$PROJECT_DIR$/navigators/Navigator.js" />
-        <option value="$PROJECT_DIR$/views/Upload.js" />
+        <option value="$PROJECT_DIR$/Hooks/APIHooks.js" />
         <option value="$PROJECT_DIR$/Hooks/UploadHooks.js" />
+        <option value="$PROJECT_DIR$/views/Upload.js" />
       </list>
     </option>
   </component>
@@ -77,9 +94,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
-    <option name="y" value="-9" />
     <option name="width" value="978" />
-    <option name="height" value="1048" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -176,7 +192,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66917000" />
+    <option name="totallyTimeSpent" value="69983000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -192,11 +208,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15167785" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15167785" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49731544" visible="true" weight="0.26487252" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49731544" visible="true" weight="0.26487252" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5026846" side_tool="true" weight="0.9575071" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -313,17 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/ListItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#1040#1394#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hooks/RegisterHooks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-277">
@@ -331,13 +336,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
@@ -395,12 +393,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Upload.js">
+    <entry file="file://$PROJECT_DIR$/components/ListItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="357">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#1040#1394#0" />
           </folding>
         </state>
       </provider>
@@ -412,10 +411,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Hooks/APIHooks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hooks/UploadHooks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
