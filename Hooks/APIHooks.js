@@ -9,7 +9,7 @@ const getAllMedia = () => {
     try {
       const response = await fetch(apiUrl + 'media/all');
       const json = await response.json();
-      console.log('apihooks', json);
+      console.log('apiHooks', json);
 
       const result = await Promise.all(json.files.map(async (item) => {
         const response = await fetch(apiUrl + 'media/' + item.file_id);

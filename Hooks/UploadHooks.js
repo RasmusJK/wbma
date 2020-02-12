@@ -1,4 +1,8 @@
 import {useState} from 'react';
+import {AsyncStorage} from 'react-native';
+
+
+const apiUrl ='http://media.mw.metropolia.fi/wbma/media';
 
 const useUploadForm = () => {
   const [inputs, setInputs] = useState({});
@@ -23,13 +27,30 @@ const useUploadForm = () => {
   };
 };
 
+
+
 const handleUpload = async (image, title, desc) => {
+console.log('image',image);
+
+  const filename = image.split('/').pop();
+  console.log('filename', filename);
+
+  const match = /\.(\w+)$/.exec(filename);
+  let type = match ? `image/${match[1]}` : `image`;
+  // fix jpg mimeType
+  if (type === 'image/jpg') {
+    type = 'image/jpeg';
+  }
+
 
   let formData = new FormData();
-  formData.append('file', image);
+  formData.append('file', {uri: image, name: filename, type});
   formData.append('title', title);
   formData.append('description', desc);
 
+  const token = await AsyncStorage.getItem('userToken');
+
+console.log('formData',formData);
   const fetchOptions = {
     method: 'POST',
     headers: {
@@ -40,9 +61,13 @@ const handleUpload = async (image, title, desc) => {
   };
 
   try {
+
+    console.log("token: " + token);
     const response = await fetch(apiUrl, fetchOptions);
-    console.log("Upload successful");
+
+
     return await response.json();
+
   } catch (e) {
     console.log('Error: ', e.message);
   }

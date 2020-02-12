@@ -9,7 +9,8 @@ import {List as BaseList} from 'native-base';
 const List = (props) => {
   const [media, setMedia] = useContext(MediaContext);
   const [data] = getAllMedia();
-  setMedia(data);
+
+  setMedia(data.reverse());
   return (
     <BaseList
       dataArray={media}
